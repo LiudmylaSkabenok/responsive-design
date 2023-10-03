@@ -11,17 +11,17 @@ header {
     justify-content: center; 
 }
 .layout__header {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     margin-top: 62px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 .logo {
     color: #242635;
-    font-family: Aldrich;
+    font-family: 'Aldrich', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -29,32 +29,70 @@ header {
     letter-spacing: -0.25px;
 }
 .nav {
-    min-width: 600px;
+    min-width: 700px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 .nav__list {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: row;
     margin-left: 10px;
 }
-
 .nav__link {
     color: #242635;
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 22.4px; /* 140% */
     text-decoration: none;
-    
+    margin-left: 28px;
+}
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+.main__heading {
+    color: #242635;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 102px; /* 113.333% */
+    letter-spacing: -2px;
+    text-align: center;
+    margin-top: 144px;
+}
+.main__info {
+    color: #242635;
+    font-family: 'Source Sans 3', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px; /* 150% */
+    margin-top: 30px;
+    max-width: 600px;
+}
+.main__image {
+    margin-top: 30px;
 }
 
-.nav__link:hover {
-    color: rgb(75, 172, 196);
-}
