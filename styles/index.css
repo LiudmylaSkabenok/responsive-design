@@ -1,5 +1,6 @@
 body {
-    width: 100%;
+    max-width: 100%;
+    margin: 0auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -8,15 +9,14 @@ header {
     width: 100%;
     display: flex;
     justify-content: center; 
-    margin: 0;
+    background-color: gainsboro;
 }
 .layout__header {
     max-width: 1400px;
     width: 100%;
-    margin-top: 62px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .logo {
@@ -29,30 +29,33 @@ header {
     letter-spacing: -0.25px;
 }
 .nav {
-    min-width: 700px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.nav__list {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 10px;
-}
-.nav__link {
+.nav a {
+    float: left;
+    display: block;
     color: #242635;
+    text-align: center;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 22.4px; /* 140% */
     text-decoration: none;
-    margin-left: 28px;
+    padding: 16px 16px;
 }
+.nav a:hover {
+    background-color: lightseagreen;
+    color: black;
+    font-weight: bold;
+  }
+  .nav .icon {
+    display: none;
+  }
 main {
     width: 100%;
     min-height: 100vh;
@@ -97,9 +100,6 @@ main {
     max-width: 864px;
     min-height: 328px;
 }
-@media only screen and (orientation: landscape) {
-    .main__info
-}
 @media screen and (max-width: 800px) {
     .main__info {
          font-size: 12px;
@@ -115,6 +115,7 @@ main {
          font-size: 36px;
     }
  } 
+
  @media screen and (max-width: 1000px) {
     .main__image {
         max-width: 617px;
@@ -127,8 +128,26 @@ main {
         min-height: 284px;
     }
  } 
- @media screen and (max-width: 1000px) {
-    .nav__list {
-        justify-content: center; 
+ @media screen and (max-width: 800px) {
+    .nav a {display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+      }
     }
-}
+  @media screen and (max-width: 800px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: right;
+    }
+  }
+
+  
+  
